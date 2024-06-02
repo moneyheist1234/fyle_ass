@@ -1,0 +1,284 @@
+/* Reset styles */
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: Arial, sans-serif;
+}
+
+/* Main layout */
+body {
+  width: 100%;
+}
+
+/* Headings and Paragraphs */
+h6 {
+  font-size: 3rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Button styles */
+.btn-danger {
+  margin: auto;
+  background-color: #ff4d4d;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #ff3333;
+}
+
+/* Image styles */
+.custom-img {
+  width: 100%;
+  max-width: 500%;
+  height: 500%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Modal styles */
+.modal-content {
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.project-container {
+  margin-bottom: 50px;
+}
+
+.project-header, .growth-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-header h2, .growth-header h2 {
+  color: #ff0044;
+  font-size: 16px;
+  margin: 0;
+}
+
+.project-header h1, .growth-header h1 {
+  color: #000;
+  font-size: 36px;
+  margin: 10px 0 0 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.detail-item:hover {
+  background-color: #ececec;
+}
+
+.detail-item.highlight {
+  background-color: #ff0044;
+  color: #fff;
+}
+
+.detail-item.highlight h3,
+.detail-item.highlight p {
+  color: #fff;
+}
+
+.detail-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.detail-item p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.growth-container {
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 40px;
+  color: #ff0044;
+  margin-bottom: 10px;
+}
+
+.stat-number {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Sliders */
+.slider-container {
+  width: 80%; /* Adjust the width as needed */
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.image-slider {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slides-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto; /* Adjust to fit content */
+  position: relative;
+  margin-right: 20px; /* Add gap between images */
+}
+
+.img {
+  width: 240px;
+  height: 370px;
+  transition: transform 0.5s, filter 0.5s;
+  /* filter: saturate(10%); */
+}
+
+.button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: background-color 0.5s, opacity 0.3s;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slides-div:hover .button {
+  opacity: 1;
+}
+
+.slides-div:hover .img {
+  transform: scale(1.1);
+  filter: saturate(100%);
+}
+
+/* Dots navigation */
+.dots-container {
+  display: flex;
+  justify-content: left;
+  margin-left: 19%;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  margin: 0 5px;
+  background-color: black;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  outline-offset: 4px; /* Offset the outline slightly */
+}
+
+.dot:hover,
+.dot.active {
+  outline: 1px solid red; /* Add an outline */
+  outline-color: red; /* Change outline color on hover or when active */
+  background-color: red;
+}
+
+/* Read More Button */
+.slides-div:hover .button::after {
+  content: "READ MORE";
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ff4b43;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slides-div:hover .button::after:hover {
+  background-color: #e94339;
+}
+
+.button::after {
+  content: "";
+  display: none;
+}
+
+.slides-div:hover .button::after {
+  display: block;
+}
